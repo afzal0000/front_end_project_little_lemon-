@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Little Lemon - Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+        <img src="images/little-lemon-grey-logo2_header.png" alt="Little Lemon Logo">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="book.html">Book</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1 style="text-align: center;">Make a Reservation</h1>
+        
+        <form >
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Your Name" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Your Last Name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="guests">Number of Guests:</label>
+            <select id="guests" name="guests">
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3">3 People</option>
+                <option value="4">4 People</option>
+                <option value="5+">5+ People</option>
+            </select>
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" rows="4"></textarea>
+
+            <button type="button" onclick="document.querySelector('form').reset(); alert('Table Booked!')">Book Table</button>       
+        </form>
+    </main>
+
+     <footer>
+        <img src="images/footer_logo.png" alt="Logo">
+        <div>Copyright Little Lemon</div>
+    </footer>
+</body>
+</html>
