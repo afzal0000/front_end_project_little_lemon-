@@ -199,6 +199,111 @@ Responsive Design
 
 ---
 
+================================================================================
+                        JAVASCRIPT FUNCTIONALITY
+================================================================================
+
+File: c:\Users\md\OneDrive\Desktop\front end project\script.js
+
+OVERVIEW:
+JavaScript enhances interactivity by adding dynamic year updates, form validation,
+and menu filtering capabilities.
+
+---
+
+1. DYNAMIC FOOTER YEAR UPDATE
+================================================================================
+EVENT: DOMContentLoaded
+TRIGGER: Runs when page loads
+
+FUNCTIONALITY:
+- Automatically inserts current year into footer copyright text
+- Fetches the footer div element
+- Updates text to: "Copyright Little Lemon [CURRENT_YEAR]"
+- Includes console logging for debugging
+
+CODE LOCATION:
+  window.addEventListener('DOMContentLoaded', () => {
+    const currentYear = new Date().getFullYear();
+    const footerText = document.querySelector('footer div');
+    if (footerText) {
+      footerText.textContent = `Copyright Little Lemon ${currentYear}`;
+      console.log("Footer year updated!");
+    }
+  });
+
+BENEFIT:
+- No need to manually update copyright year every January 1st
+- Always displays accurate current year automatically
+
+
+---
+
+2. RESERVATION FORM VALIDATION
+================================================================================
+FUNCTION: validateReservation()
+TRIGGER: Called on "Book Table" button click
+
+VALIDATES:
+- First Name field (fname) - cannot be empty
+- Email field (email) - cannot be empty
+
+FUNCTIONALITY:
+- Checks if both fields contain values
+- Shows alert if fields are empty: "Please fill in your name and email first!"
+- If valid: Shows confirmation alert with customer's name
+- Resets form after successful submission
+
+EXAMPLE OUTPUT:
+  Input: firstName = "John", email = "john@example.com"
+  Alert: "Thank you, John! Your table is booked."
+  Form: Clears all fields
+
+FORM IDS REQUIRED:
+- id="fname"     (First Name input)
+- id="email"     (Email input)
+
+
+---
+
+3. MENU SEARCH & FILTER
+================================================================================
+FUNCTION: filterMenu()
+STATUS: Demo/Not Yet Implemented
+
+NOTE: This function is currently a demo and not active on the website.
+The search functionality is prepared for future implementation.
+
+INTENDED FUNCTIONALITY (When Implemented):
+- Will search menu items in real-time by title
+- User types in search input (#menuSearch)
+- Compares input with menu item h3 titles (case-insensitive)
+- Shows matching items, hides non-matching items
+
+EXPECTED BEHAVIOR:
+- Input: "pasta"
+  Output: Shows only "Creamy Garlic Pasta" card
+  
+- Input: "fish"
+  Output: Shows only "Grilled Fish" card
+  
+- Input: "" (empty)
+  Output: Shows all menu items
+
+ELEMENTS REQUIRED (When Implemented):
+- id="menuSearch"          (Search input field)
+- class="menu-item-card"   (Menu item containers)
+- h3 tags inside each card (Item titles to search)
+
+HTML STRUCTURE EXAMPLE:
+  <input type="text" id="menuSearch" placeholder="Search menu...">
+  <div class="menu-item-card">
+    <h3>Grilled Fish</h3>
+    ...
+  </div>
+
+---
+
 
 ---
 
