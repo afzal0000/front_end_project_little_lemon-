@@ -1,5 +1,5 @@
 
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const currentYear = new Date().getFullYear();
    
     const footerText = document.querySelector('footer div'); 
